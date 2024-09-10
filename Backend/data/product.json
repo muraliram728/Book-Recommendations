@@ -1,4 +1,34 @@
-{
+[
+  {
+    "name": "Magic Book",
+    "price": 29.99,
+    "description": "A book filled with magical tales.",
+    "ratings": "4.5",
+    "images": [
+      {
+        "image": "https://example.com/image1.jpg"
+      }
+    ],
+    "category": "magic",
+    "seller": "John's Bookstore",
+    "stock": 15,
+    "numOfReviews": 2,
+    "reviews": [
+      {
+        "name": "Alice",
+        "rating": "5",
+        "comment": "Amazing book with great stories!"
+      },
+      {
+        "name": "Bob",
+        "rating": "4",
+        "comment": "Enjoyed it, but the ending was predictable."
+      }
+    ],
+    "CreatedAt": "2024-09-06T12:34:56Z"
+  },
+
+  {
     "name": "Magic Book",
     "price": 29.99,
     "description": "A book filled with magical tales.",
@@ -26,4 +56,7 @@
     ],
     "CreatedAt": "2024-09-06T12:34:56Z"
   }
+
+]
+  
   
