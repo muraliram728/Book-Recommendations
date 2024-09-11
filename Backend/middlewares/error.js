@@ -5,13 +5,21 @@ module.exports = (err,req,res,next) =>{
         res.status(err.statusCode).json({
             success: false,
             message: err.message,
-            stack: err.stack
+            stack: err.stack,
+            error:err
         })
     }
-    if (process.env.NODE_ENV == 'production'){
+    if (process.env.NODE_ENV == 'Production'){
+        let message = err.message;
+        let error = new Error(message);
+
+        if (err.name == "ValidatorError") {
+            message = Object.values(err.errors).map(Value => Value.message)
+            error = new Error(message)
+        }
         res.status(err.statusCode).json({
             success: false,
-            message: err.message,
+            message: err.message || 'internal server error',
         })
     }
 }
