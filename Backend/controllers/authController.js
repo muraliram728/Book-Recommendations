@@ -1,5 +1,6 @@
 const catchAsyncError = require('../middlewares/catchAsyncError');
 const User = require('../models/userModel');
+const errorHandler = require('../utils/errorHandler')
 
 exports.registerUser = catchAsyncError(async (req,res,next) => {
     const {name,email,password,avatar} = req.body
@@ -17,4 +18,12 @@ exports.registerUser = catchAsyncError(async (req,res,next) => {
         user,
         token
     })
+})
+
+exports.loginUser = catchAsyncError(async (req,res,next) => {
+    const {email,password} = req.body
+
+    if(!email || !password){
+        return next(new Error)
+    }
 })
