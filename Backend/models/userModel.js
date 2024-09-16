@@ -40,6 +40,9 @@ const userScheema = new mongoose.Schema({
 })
 
 userScheema.pre('save',async function (next){
+    if (!this.isModified('password')) {
+        next();
+    }
     this.password = await bcrypt.hash(this.password,10) //bcrypt package
 })
 
@@ -50,6 +53,7 @@ userScheema.methods.getJwtToken = function(){
 }
 
 userScheema.methods.isValidPassword = async function(enteredpassword){
+    console.log('on save',this.password)
     return await bcrypt.compare(enteredpassword, this.password)
 }
 
