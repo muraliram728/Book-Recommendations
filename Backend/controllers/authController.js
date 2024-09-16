@@ -1,7 +1,9 @@
 const catchAsyncError = require('../middlewares/catchAsyncError');
 const User = require('../models/userModel');
+const sendEmail = require('../utils/email');
 const ErrorHandler = require('../utils/errorHandler');
 const sendToken = require('../utils/jwt')
+
 
 exports.registerUser = catchAsyncError(async (req,res,next) => {
     const {name,email,password,avatar} = req.body
@@ -56,7 +58,7 @@ exports.forgotPassword = catchAsyncError(async (req,res,next) => {
     }
 
     const resetTokken = user.getResetToken();
-    user.save({validateBeforeSave: false})
+    await user.save({validateBeforeSave: false})
 
     //create reset URL
     const resetUrl = `${req.protocol}://${req.get('host')}/api/v1/password/reset/${resetTokken}`;
@@ -66,7 +68,15 @@ exports.forgotPassword = catchAsyncError(async (req,res,next) => {
 
     try {
         //utilty function
-        
+        sendEmail({
+            email : user.email,
+            subject : "Bookdom Password Recovery",
+            message
+        })
+        res.status(200).json({
+            success : true,
+            message : `email send to ${user.email}`
+        })
 
     } catch (error) {
         user.resetPasswordTokken = undefined;
