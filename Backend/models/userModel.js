@@ -54,7 +54,7 @@ userScheema.methods.getJwtToken = function(){
 
 userScheema.methods.isValidPassword = async function(enteredpassword){
     console.log('on save',this.password)
-    return await bcrypt.compare(enteredpassword, this.password)
+    return bcrypt.compare(enteredpassword, this.password)
 }
 
 userScheema.methods.getResetToken = function(){
