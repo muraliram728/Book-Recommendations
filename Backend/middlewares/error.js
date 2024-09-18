@@ -16,10 +16,12 @@ module.exports = (err,req,res,next) =>{
         if (err.name == "ValidatorError") {
             message = Object.values(err.errors).map(Value => Value.message)
             error = new Error(message)
+            err.statusCode = 400
         }
         if(err.code == 11000){
             let message = `Duplicate ${Object.keys(err.keyValue)} error`
             error = new Error(message)
+            err.statusCode = 400
         }
         res.status(err.statusCode).json({
             success: false,
