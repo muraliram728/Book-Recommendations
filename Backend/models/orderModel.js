@@ -24,13 +24,13 @@ const orderSchema = mongoose.Schema({
         },
     },
 
-    user:{
+    user: {
         type: mongoose.Schema.Types.ObjectId,
-        required:true,
-        ref:'user'
+        required: true,
+        ref: 'User' // Ensure this matches the User model name
     },
 
-    orderItems:[{
+    orderItems: [{
         name:{
             type:String,
             required:true
@@ -50,47 +50,47 @@ const orderSchema = mongoose.Schema({
         product:{
             type: mongoose.Schema.Types.ObjectId,
             required:true,
-            ref:'product'
+            ref:'Product'
         }
     }],
 
-    itemsPrice:{
+    itemsPrice: {
         type:Number,
         required:true,
         default:0.0
     },
-    taxPrice:{
+    taxPrice: {
         type:Number,
         required:true,
         default:0.0
     },
-    shippingPrice:{
+    shippingPrice: {
         type:Number,
         required:true,
         default:0.0
     },
-    totalPrice:{
+    totalPrice: {
         type:Number,
         required:true,
         default:0.0
     },
-    paidAt:{
+    paidAt: {
         type:Date,
     },
-    deleverdAt:{
+    deliveredAt: {
         type:Date,
     },
-    orderStatus:{
+    orderStatus: {
         type : String,
         required : true,
-        default : 'Prossing'
+        default : 'Processing'
     },
-    orderStatus:{
+    createdAt: {
         type : Date,
         default : Date.now
     },
-})
+});
 
-let orderModel = mongoose.model('Order',orderSchema);
+const Order = mongoose.model('Order', orderSchema);
 
-module.exports = orderModel;
+module.exports = Order;
