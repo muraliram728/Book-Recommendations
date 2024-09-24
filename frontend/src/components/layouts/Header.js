@@ -1,9 +1,14 @@
-import React from "react"
+import React from "react";
+import { AppBar, Typography } from "@mui/material";
 
-export default function Header () {
-    return(
-        <div>
-            
-        </div>
-    )
-}
+const Header = () => {
+  return (
+    <React.Fragment>
+      <AppBar>
+        <Typography></Typography>
+      </AppBar>
+    </React.Fragment>
+  );
+};
+
+export default Header;
