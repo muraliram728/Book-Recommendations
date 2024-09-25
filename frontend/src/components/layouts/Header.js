@@ -1,6 +1,7 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Tabs, Tab } from "@mui/material";
-import BookIcon from '@mui/icons-material/Book';
+import { AppBar, Toolbar, Typography, Tabs, Tab, Box, Avatar } from "@mui/material";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { deepPurple } from "@mui/material/colors";
 
 const Header = () => {
   return (
@@ -8,13 +9,39 @@ const Header = () => {
       <AppBar sx={{ background: "#f6ffde" }}>
         <Typography>
           <Toolbar>
-            <BookIcon sx={{ background: "black" }} />
-            <Tabs Color="black">
-              <Tab label="Products" />
-              <Tab label="Services" />
-              <Tab label="ContactUS" />
-              <Tab label="About Us" />
+            <Box display="flex" alignItems="center" sx={{ ml: 2 }} >
+            <Avatar sx={{ bgcolor: deepPurple[500], mr: 1 }} src="/path/to/avatar.jpg">
+                L
+              </Avatar>
+            <Typography variant="body1" sx={{ color: "black" }}>
+              Logo name
+            </Typography>
+            </Box>
+            <Tabs Color="black" sx={{ ml: "auto", color: "black", fontWeight: "bold" }}>
+              <Tab label="Home" />
+              <Tab label="My Books" />
+              <Tab
+                label={
+                  <Box display="flex" alignItems="center">
+                    Reviews
+                    <KeyboardArrowDownIcon sx={{ ml: 1 }} />
+                  </Box>
+                }
+              />
+              <Tab
+                label={
+                  <Box display="flex" alignItems="center">
+                    Community
+                    <KeyboardArrowDownIcon sx={{ ml: 1 }} />
+                  </Box>
+                }
+              />
             </Tabs>
+            <Box >
+              <Avatar sx={{ bgcolor: deepPurple[500], mr: 1 }} src="/path/to/avatar.jpg">
+                U
+              </Avatar>
+            </Box>
           </Toolbar>
         </Typography>
       </AppBar>
