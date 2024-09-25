@@ -5,14 +5,18 @@ import { deepPurple } from "@mui/material/colors";
 
 const Header = () => {
   return (
-    <React.Fragment>
-      <AppBar sx={{ background: "#f6ffde" }}>
+      
+      <AppBar sx={{ background: "#f6ffde" }} elevation={0} position="fixed">
         <Typography>
           <Toolbar>
             <Box display="flex" alignItems="center" sx={{ ml: 2 }} >
             <Avatar sx={{ bgcolor: deepPurple[500], mr: 1 }} >
                 L
               </Avatar>
+              {/* <Box  sx={{ bgcolor: deepPurple[500], mr: 1 }}>
+
+              <img src="/asstes/C-Logo.jpg" alt="checking"/>
+              </Box> */}
             <Typography variant="body1" sx={{ color: "black" }}>
               Logo name
             </Typography>
@@ -45,7 +49,7 @@ const Header = () => {
           </Toolbar>
         </Typography>
       </AppBar>
-    </React.Fragment>
+     
   );
 };
 
