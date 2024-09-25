@@ -10,14 +10,14 @@ const Header = () => {
         <Typography>
           <Toolbar>
             <Box display="flex" alignItems="center" sx={{ ml: 2 }} >
-            <Avatar sx={{ bgcolor: deepPurple[500], mr: 1 }} src="/path/to/avatar.jpg">
+            <Avatar sx={{ bgcolor: deepPurple[500], mr: 1 }} >
                 L
               </Avatar>
             <Typography variant="body1" sx={{ color: "black" }}>
               Logo name
             </Typography>
             </Box>
-            <Tabs Color="black" sx={{ ml: "auto", color: "black", fontWeight: "bold" }}>
+            <Tabs  sx={{ ml: "auto", fontWeight: "bold" }}>
               <Tab label="Home" />
               <Tab label="My Books" />
               <Tab

@@ -1,5 +1,9 @@
 import React from "react";
 import { Box, Typography, Grid2 } from "@mui/material";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import XIcon from '@mui/icons-material/X';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Footer = () => {
     return (
@@ -46,8 +50,11 @@ const Footer = () => {
                         aria-labelledby="contact"
                         sx={{ pl: 0, margin: 0, listStyleType: 'none', textAlign: "left" }} // Remove bullets
                     >
-                        <li >Contact support</li>
-                        <li >Feedback</li>
+                        <li >Contact </li>
+                        <FacebookIcon />
+                        <XIcon />
+                        <InstagramIcon />
+                        <LinkedInIcon />
                     </Box>
                 </Grid2>
 
