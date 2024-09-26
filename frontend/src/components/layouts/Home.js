@@ -29,31 +29,9 @@ export default function Home() {
                 <Paper sx={{ width: "300px", height: "500px", marginTop: "20px", marginLeft: "20px", borderRadius: "20px" }}>
                     <h4>Reading Chalange</h4>
                 </Paper>
-                {/* <Box sx={{ flexGrow: 1 }}>
-                    <Grid2 container spacing={2}>
-                        <Grid item xs={4} >
-                            <Item >xs=8</Item>
-                        </Grid>
-                        <Grid item xs={8}>
-                            <Item>xs=4</Item>
-                        </Grid>
-                        <Grid item xs={6}>
-                            <Item>xs=4</Item>
-                        </Grid>
-                        <Grid item xs={2}>
-                            <Item>xs=8</Item>
-                        </Grid>
-                        <Grid item xs={6}>
-                            <Item>xs=4</Item>
-                        </Grid>
-                        <Grid item xs={6}>
-                            <Item>xs=8</Item>
-                        </Grid>
-                    </Grid2>
-                </Box> */}
-                <div style={{marginTop:"20px"}}>
+                <Box sx={{marginLeft:"-25px", marginTop: "20px !important"}}>
                 <Popular />
-                </div>
+                </Box>
                 <Paper sx={{ width: "300px", height: "500px", marginTop: "20px", marginRight: "20px", borderRadius: "20px" }}>
                     <h4>Reading Chalange</h4>
                 </Paper>
