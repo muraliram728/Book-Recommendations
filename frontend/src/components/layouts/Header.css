@@ -1,0 +1,49 @@
+/* Header.css */
+.app-bar {
+    background: #f6ffde;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 16px; /* Adjusted for consistency */
+}
+
+.logo-name {
+    color: black;
+}
+
+.tabs {
+    margin-left: auto;
+    font-weight: bold;
+}
+
+/* Avatar container adjustments */
+.avatar-container {
+    margin-right: 16px; /* Adjusted for consistency */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .logo-container {
+        margin-left: 8px; /* Reduce margin on smaller screens */
+    }
+
+    .tabs {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .avatar-container {
+        margin-right: 8px; /* Reduce margin on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-name {
+        font-size: 16px; /* Reduce logo font size for very small screens */
+    }
+
+    .tabs {
+        font-size: 12px; /* Further reduce font size for very small screens */
+    }
+}

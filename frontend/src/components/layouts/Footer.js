@@ -4,19 +4,20 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import './Footer.css'; // Import the CSS file
 
 const Footer = () => {
     return (
-        <Box sx={{ backgroundColor: "#E4EFC9", padding: 2 }}>
-            <Grid2 container spacing={15} >
+        <Box className="footer-container">
+            <Grid2 container spacing={15}>
                 <Grid2 item xs={12} md={6}>
-                    <Typography sx={{ fontWeight: "bold", mt: 2 }}>
+                    <Typography className="footer-heading">
                         WORK WITH US
                     </Typography>
                     <Box
                         component="ul"
                         aria-labelledby="work-with-us"
-                        sx={{ pl: 0, margin: 0, listStyleType: 'none', textAlign: "left" }} // Remove bullets
+                        className="footer-list"
                     >
                         <li>About us</li>
                         <li>Careers</li>
@@ -28,29 +29,29 @@ const Footer = () => {
                 </Grid2>
 
                 <Grid2 item xs={12} md={6}>
-                    <Typography sx={{ fontWeight: "bold", mt: 2 }}>
-                        WORK WITH US
+                    <Typography className="footer-heading">
+                        PARTNER WITH US
                     </Typography>
                     <Box
                         component="ul"
                         aria-labelledby="work-with-us"
-                        sx={{ pl: 0, margin: 0, listStyleType: 'none', textAlign: "left" }} // Remove bullets
+                        className="footer-list"
                     >
-                        <li >Partner with us</li>
-                        <li >Become a vendor</li>
+                        <li>Partner with us</li>
+                        <li>Become a vendor</li>
                     </Box>
                 </Grid2>
 
                 <Grid2 item xs={12} md={6}>
-                    <Typography sx={{ fontWeight: "bold", mt: 2 }}>
+                    <Typography className="footer-heading">
                         CONTACT
                     </Typography>
                     <Box
                         component="ul"
                         aria-labelledby="contact"
-                        sx={{ pl: 0, margin: 0, listStyleType: 'none', textAlign: "left" }} // Remove bullets
+                        className="footer-list"
                     >
-                        <li >Contact </li>
+                        <li>Contact</li>
                         <FacebookIcon />
                         <XIcon />
                         <InstagramIcon />
@@ -59,22 +60,21 @@ const Footer = () => {
                 </Grid2>
 
                 <Grid2 item xs={12}>
-                    <Typography sx={{ fontWeight: "bold", mt: 2 }}>
+                    <Typography className="footer-heading">
                         FUTURE SECTION
                     </Typography>
                     <Box
                         component="ul"
                         aria-labelledby="future-section"
-                        sx={{ pl: 0, margin: 0, listStyleType: 'none', textAlign: "left" }} // Remove bullets
+                        className="footer-list"
                     >
                         <li>Upcoming Features</li>
                     </Box>
                 </Grid2>
             </Grid2>
-            <hr style={{ borderTopColor: "#bbb", opacity: 0.5, margin: "20px 0" }} />
-            <p>Copyright © YYYYYYYY Company name All rights reserved</p>
+            <hr className="footer-divider" />
+            <p className="footer-copyright">Copyright © YYYYYYYY Company name All rights reserved</p>
         </Box>
-
     );
 };
 

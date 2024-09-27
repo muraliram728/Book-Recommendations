@@ -1,0 +1,71 @@
+/* styles.css */
+.container {
+    background-color: #f6ffde;
+    height: 80vh;
+    padding: 20px; /* Add padding for mobile screens */
+}
+
+.search-box {
+    padding: 2px 4px; 
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px; /* Set max-width for larger screens */
+    border-radius: 25px;
+    margin: 10px auto; /* Center the search box */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    padding: 10px;
+}
+
+.input-base {
+    margin-left: 8px;
+    flex: 1;
+}
+
+.sidebar-paper {
+    width: 100%; /* Make it responsive */
+    max-width: 300px; /* Set max width for larger screens */
+    height: 500px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.popular-container {
+    margin-left: -25px;
+    margin-top: 20px !important;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .search-box {
+        width: 90%; /* Use smaller width on mobile */
+    }
+
+    .sidebar-paper {
+        width: 100%; /* Make sidebar paper full width on mobile */
+        margin-left: 0; /* Reset left margin on mobile */
+    }
+
+    .popular-container {
+        margin-left: 0; /* Reset left margin on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .search-box {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: stretch; /* Stretch to full width */
+    }
+
+    .input-base {
+        margin-left: 0; /* Remove margin for better stacking */
+        margin-top: 5px; /* Add some space between input and icon */
+    }
+
+    .sidebar-paper {
+        height: auto; /* Allow height to adjust based on content */
+    }
+}
