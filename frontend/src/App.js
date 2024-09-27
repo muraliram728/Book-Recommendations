@@ -1,8 +1,8 @@
 import './App.css';
 import Footer from './components/layouts/Footer';
 import Header from './components/layouts/Header';
-import Home from './components/layouts/Home';
 import { Toolbar, Box } from "@mui/material";
+import Home from './components/layouts/Home/Home';
 
 function App() {
   return (

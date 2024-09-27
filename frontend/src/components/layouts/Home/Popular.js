@@ -15,9 +15,9 @@ export default function Popular() {
         <Grid item md={6}>
             <Paper sx={{height: "100px", width:"600px", borderRadius:"10px",marginLeft:"20px"}}></Paper>
         </Grid>
-        <Grid item md={4}>
+        {/* <Grid item md={4}>
             <Paper sx={{height: "100px", width:"400px", borderRadius:"10px",marginLeft:"20px"}}></Paper>
-        </Grid>
+        </Grid> */}
       </Grid>
     </Box>
   );

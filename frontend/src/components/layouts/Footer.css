@@ -1,0 +1,53 @@
+/* Footer.css */
+.footer-container {
+    background-color: #E4EFC9;
+    padding: 16px; /* Adjust for consistent padding */
+}
+
+.footer-heading {
+    font-weight: bold;
+    margin-top: 16px; /* Adjust for consistent margin */
+}
+
+.footer-list {
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none; /* Remove bullets */
+    text-align: left; /* Align text to the left */
+}
+
+.footer-divider {
+    border-top-color: #bbb;
+    opacity: 0.5;
+    margin: 20px 0;
+}
+
+.footer-copyright {
+    text-align: center; /* Center the copyright text */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 12px; /* Reduce padding on smaller screens */
+    }
+
+    .footer-heading {
+        font-size: 18px; /* Adjust heading font size for smaller screens */
+        margin-top: 12px; /* Adjust margin for consistency */
+    }
+
+    .footer-list {
+        text-align: center; /* Center align list items for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-heading {
+        font-size: 16px; /* Further reduce heading font size for very small screens */
+    }
+
+    .footer-list {
+        font-size: 14px; /* Adjust font size of list items */
+    }
+}
