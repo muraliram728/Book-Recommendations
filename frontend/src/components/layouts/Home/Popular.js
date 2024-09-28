@@ -1,24 +1,35 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid2';
+import { Button, Container, Paper } from '@mui/material';
+
+
 
 
 export default function Popular() {
   return (
     <Box >
-      <Grid display={'flex'}>
-        <Grid item xs={6} >
-            <Paper sx={{height: "250px", width:"120px", borderRadius:"10px",marginLeft:"20px"}}></Paper>
+      <h4>Popular Groups</h4>
+      <Grid container spacing={2}>
+        <Grid size={4} >
+          <Paper sx={{ minHeight: "219px", minWidth: "160px" }}>size=8</Paper>
         </Grid>
-        <Grid item md={6}>
-            <Paper sx={{height: "100px", width:"600px", borderRadius:"10px",marginLeft:"20px"}}></Paper>
+        <Grid size={8} >
+          <Paper sx={{ minHeight: '100px', minWidth: '470px' }}>size=4</Paper>
+          <Box display={'flex'} mt={2} gap={2}>
+            <Grid size={8}  >
+              <Paper sx={{ minHeight: '100px', minWidth: '320px' }}>hhhehheh</Paper>
+            </Grid>
+            <Grid size={4} >
+              <Paper sx={{ minHeight: '100px', minWidth: "140px" }}>ioehqw </Paper>
+            </Grid>
+          </Box>
         </Grid>
-        {/* <Grid item md={4}>
-            <Paper sx={{height: "100px", width:"400px", borderRadius:"10px",marginLeft:"20px"}}></Paper>
-        </Grid> */}
+        <Grid size={4} display={'flex'} gap={2}>
+          <Paper sx={{ minHeight: '100px', minWidth: '350px' }}>size=8</Paper>
+          <Paper sx={{ minHeight: '100px', minWidth: '356px' }}>size=8</Paper>
+        </Grid>
       </Grid>
     </Box>
-  );
+  )
 }

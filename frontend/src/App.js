@@ -3,6 +3,7 @@ import Footer from './components/layouts/Footer';
 import Header from './components/layouts/Header';
 import { Toolbar, Box } from "@mui/material";
 import Home from './components/layouts/Home/Home';
+import Popular from './components/layouts/Home/Popular';
 
 function App() {
   return (

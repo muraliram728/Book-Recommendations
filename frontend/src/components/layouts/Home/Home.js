@@ -8,7 +8,7 @@ const YourComponent = () => {
     return (
         <Box className="container">
             <Box sx={{ display: "flex", justifyContent: "center" }}>
-                <Paper className='Right-paper search-box' component="form" sx={{borderRadius:'25px'}}>
+                <Paper className='Right-paper search-box' component="form" sx={{ borderRadius: '25px' }}>
                     <IconButton type="button" className="search-icon" aria-label="search" >
                         <SearchIcon />
                     </IconButton>
@@ -20,13 +20,13 @@ const YourComponent = () => {
                 </Paper>
             </Box>
             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                <Paper className="sidebar-paper" sx={{ marginLeft: "20px" }}>
+                <Paper className="sidebar-paper1" >
                     <h4>Reading Challenge</h4>
                 </Paper>
-                <Box className="popular-container">
+                <Box sx={{maxWidth:'725px'}}>
                     <Popular />
                 </Box>
-                <Paper className="sidebar-paper" sx={{ marginRight: "20px" }}>
+                <Paper className="sidebar-paper2" >
                     <h4>Reading Challenge</h4>
                 </Paper>
             </Box>
