@@ -23,7 +23,7 @@ const YourComponent = () => {
                 <Paper className="sidebar-paper1" >
                     <h4>Reading Challenge</h4>
                 </Paper>
-                <Box sx={{maxWidth:'725px'}}>
+                <Box className='Popular-Box' >
                     <Popular />
                 </Box>
                 <Paper className="sidebar-paper2" >

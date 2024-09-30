@@ -1,0 +1,111 @@
+/* General styling for the Popular Groups component */
+.popular-container {
+    margin-top: 20px;
+  }
+  
+  /* Title Styling */
+  .popular-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  /* Paper-1 Class for specific Paper element */
+  .Paper-1 {
+    min-height: 219px;
+    min-width: 160px;
+  }
+  
+  /* Flexbox for inner grid spacing */
+  .flex-box {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .flex-box2 {
+    display: flex;
+    gap: 16px;
+    margin-top: -5px;
+  }
+  
+  /* Paper size styles */
+  .paper-extra-large {
+    min-height: 100px;
+    min-width: 470px;
+  }
+  
+  .paper-medium {
+    min-height: 100px;
+    min-width: 320px;
+  }
+  
+  .paper-small {
+    min-height: 100px;
+    min-width: 140px;
+  }
+  
+  .paper-medium-large {
+    min-height: 100px;
+    min-width: 350px;
+  }
+  
+  .paper-medium-large-alt {
+    min-height: 100px;
+    min-width: 356px;
+  }
+  
+  /* Media Queries for Responsive Design */
+  
+  /* For screens that are 1024px or smaller (laptops) */
+  @media (max-width: 1024px) {
+    /* Adjusting paper elements to fit better on smaller screens */
+    
+    .Paper-1 {
+      min-width: 120px;
+      min-height: 180px;
+    }
+  
+    .paper-extra-large {
+      min-width: 340px;
+      min-height: 80px;
+    }
+  
+    .paper-medium {
+      min-width: 220px;
+      min-height: 80px;
+    }
+  
+    .paper-small {
+      min-width: 110px;
+      min-height: 80px;
+    }
+  
+    .paper-medium-large {
+      min-width: 250px;
+      min-height: 80px;
+    }
+  
+    .paper-medium-large-alt {
+      min-width: 250px;
+      min-height: 80px;
+    }
+  
+    /* Reducing gap between flex-box items on smaller screens */
+    .flex-box {
+      gap: 10px;
+      margin-top: 12px;
+    }
+  
+    .flex-box2 {
+      display: flex;
+      gap: 16px;
+      margin-top: -5px;
+    }
+    
+    /* Title font-size adjustment for laptops */
+    .popular-title {
+      font-size: 1.2rem;
+    }
+  }
+  
